@@ -36,7 +36,7 @@ on:
 
 jobs:
   Build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Display run parameters
       run: |
@@ -106,7 +106,7 @@ jobs:
       if: ${{ failure() }}
       with:
         name: errorlog
-        path: /home/localhost/Android/${{ github.event.inputs.ROM_NAME_ANDROID_VERSION }}/out/error.log
+        path: ./${{ github.event.inputs.ROM_NAME_ANDROID_VERSION }}/out/error.log
 
     - name: Find ROM
       id: upload-file
