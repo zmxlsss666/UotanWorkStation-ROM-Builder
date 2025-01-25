@@ -12,7 +12,7 @@ on:
 
 jobs:
   Sync:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Display run parameters
       run: |
